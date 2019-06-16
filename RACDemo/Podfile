@@ -1,0 +1,9 @@
+target :'RACDemo' do
+
+    
+platform :ios, '9.0'
+
+pod 'ReactiveObjC', '~> 3.0.0'
+pod 'Masonry'
+
+end

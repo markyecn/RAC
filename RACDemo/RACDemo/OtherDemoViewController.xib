@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OtherDemoViewController">
+            <connections>
+                <outlet property="textField" destination="T9n-Bp-Xa7" id="YhD-vP-WGj"/>
+                <outlet property="textLabel" destination="oX3-dH-pXP" id="9AM-P8-xkh"/>
+                <outlet property="timeLabel" destination="cHn-vM-JKX" id="ndR-c3-bJm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T9n-Bp-Xa7">
+                    <rect key="frame" x="50" y="100" width="275" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="CWu-v6-bSq"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oX3-dH-pXP">
+                    <rect key="frame" x="187.5" y="225" width="0.0" height="40"/>
+                    <color key="backgroundColor" red="0.1058823529" green="0.60392156860000001" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="rem-hf-2j2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHn-vM-JKX">
+                    <rect key="frame" x="0.0" y="313" width="375" height="50"/>
+                    <color key="backgroundColor" red="0.1058823529" green="0.60392156860000001" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Kjp-kG-IMn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="cHn-vM-JKX" firstAttribute="top" secondItem="oX3-dH-pXP" secondAttribute="bottom" constant="48" id="DRI-v3-jzw"/>
+                <constraint firstItem="cHn-vM-JKX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Jse-RD-qxH"/>
+                <constraint firstItem="oX3-dH-pXP" firstAttribute="centerX" secondItem="T9n-Bp-Xa7" secondAttribute="centerX" id="Ki8-D3-guc"/>
+                <constraint firstItem="T9n-Bp-Xa7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="Oqq-DA-FWu"/>
+                <constraint firstItem="T9n-Bp-Xa7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="Rkl-kr-CQa"/>
+                <constraint firstItem="T9n-Bp-Xa7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="czl-hO-mZx"/>
+                <constraint firstItem="oX3-dH-pXP" firstAttribute="top" secondItem="T9n-Bp-Xa7" secondAttribute="bottom" constant="75" id="otD-Uy-V5i"/>
+                <constraint firstAttribute="trailing" secondItem="cHn-vM-JKX" secondAttribute="trailing" id="q7z-Bd-MSb"/>
+            </constraints>
+            <point key="canvasLocation" x="38" y="123"/>
+        </view>
+    </objects>
+</document>

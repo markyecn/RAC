@@ -1,0 +1,6 @@
+target :'ReactiveCocoaDemo' do
+platform :ios, '9.0'
+
+pod 'ReactiveCocoa'
+
+end
