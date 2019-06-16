@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MDk-jU-9na">
-                    <rect key="frame" x="50" y="100" width="275" height="44"/>
+                    <rect key="frame" x="50" y="150" width="275" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="3dZ-Qh-YJi"/>
                     </constraints>
@@ -31,7 +31,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j6x-eh-9bv">
-                    <rect key="frame" x="50" y="164" width="275" height="44"/>
+                    <rect key="frame" x="50" y="214" width="275" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="Csf-qN-g10"/>
                     </constraints>
@@ -40,7 +40,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKS-1N-OxK">
-                    <rect key="frame" x="50" y="258" width="275" height="50"/>
+                    <rect key="frame" x="50" y="308" width="275" height="50"/>
                     <color key="backgroundColor" red="0.1058823529" green="0.60392156860000001" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="ggf-Ht-l1k"/>
@@ -54,7 +54,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="MDk-jU-9na" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9Uf-o5-kqL"/>
-                <constraint firstItem="MDk-jU-9na" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="NnA-K1-JId"/>
+                <constraint firstItem="MDk-jU-9na" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="NnA-K1-JId"/>
                 <constraint firstItem="MDk-jU-9na" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="Vlv-8F-EaD"/>
                 <constraint firstItem="j6x-eh-9bv" firstAttribute="leading" secondItem="MDk-jU-9na" secondAttribute="leading" id="hq3-kF-P0M"/>
                 <constraint firstItem="j6x-eh-9bv" firstAttribute="trailing" secondItem="MDk-jU-9na" secondAttribute="trailing" id="rS1-ed-Tb1"/>

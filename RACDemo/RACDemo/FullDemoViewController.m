@@ -56,6 +56,7 @@
         //发送请求
         [[self doLoginWithName:self.nameField.text password:self.passwordField.text] subscribeNext:^(id  _Nullable x) {
             if (x) {
+                NSLog(@"登录成功~~~~");
                 NSLog(@"返回的数据---%@",x);
             }
         } error:^(NSError * _Nullable error) {
@@ -84,35 +85,45 @@
     }];
     
     //订阅子视图指定方法的信号;
-    [[customView rac_signalForSelector:@selector(doSomething)] subscribeNext:^(RACTuple * _Nullable x) {
-        NSLog(@"控制器--doSomething");
-    }];
+//    [[customView rac_signalForSelector:@selector(doSomething)] subscribeNext:^(RACTuple * _Nullable x) {
+//        NSLog(@"控制器--doSomething");
+//    }];
     
+    [customView.eventSignal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
 }
 
 //RACCommand
 //简易的封装 -- 一般额外还有一层RACCommand进行封装
 - (RACSignal *)doLoginWithName:(NSString *)name password:(NSString *)pwd{
-    return [RACSignal createSignal:^RACDisposable * (id<RACSubscriber>  subscriber) {
+    RACSignal *loginSignal =  [RACSignal createSignal:^RACDisposable * (id<RACSubscriber>  subscriber) {
+        
+        //TODO
         //发送AFNetworking 请求------
         //模拟请求发送
-        [NSThread sleepForTimeInterval:2];
-        BOOL success = YES;
-        NSDictionary *dic = @{
-                              @"userId":@"222222222",
-                              @"phoneNo":@"13888888888"
-                              };
-        //处理
-        if (success) {
-            [subscriber sendNext:dic];
-            [subscriber sendCompleted];
-        }else{
-            [subscriber sendError:nil];
-        }
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            //模拟返回数据
+            BOOL success = YES;
+            NSDictionary *dic = @{
+                                  @"userId":@"222222222",
+                                  @"phoneNo":@"13888888888"
+                                  };
+            //处理
+            if (success) {
+                [subscriber sendNext:dic];
+                [subscriber sendCompleted];
+            }else{
+                //出现错误
+                [subscriber sendError:nil];
+            }
+        });
         return [RACDisposable disposableWithBlock:^{
             //TODO other things;
         }];
     }];
+
+    return loginSignal;
 }
 
 @end

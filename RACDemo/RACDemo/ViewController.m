@@ -33,7 +33,7 @@
     self.demoArray = [NSMutableArray arrayWithArray:@[@"1. 基础信号Demo",
                                                       @"2. 输入框/按钮Demo",
                                                       @"3. 代理/通知Demo",
-                                                      @"4. 其他(宏,遍历,定时器     等)Demo",
+                                                      @"4. 其他(宏,遍历,定时器等)Demo",
                                                       @"5. 使用示例Demo"]];
     
     //订阅列表点击信号

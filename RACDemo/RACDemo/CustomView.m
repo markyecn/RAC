@@ -7,8 +7,6 @@
 //
 
 #import "CustomView.h"
-#import <ReactiveObjC/ReactiveObjC.h>
-#import <ReactiveObjC/RACEXTScope.h>
 #import <Masonry.h>
 
 @interface CustomView()
@@ -36,6 +34,7 @@
         make.width.mas_equalTo(200);
         make.height.mas_equalTo(50);
     }];
+    
     //按钮点击
     [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
         [self doSomething];
@@ -44,6 +43,14 @@
 
 - (void)doSomething{
     NSLog(@"子视图--doSomething");
+    [self.eventSignal sendNext:@"子视图按钮点击了！"];
+}
+
+- (RACSubject *)eventSignal{
+    if (!_eventSignal) {
+        _eventSignal = [[RACSubject alloc] init];
+    }
+    return _eventSignal;
 }
 
 @end

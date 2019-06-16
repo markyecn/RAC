@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CUI-9K-8yb">
-                    <rect key="frame" x="50" y="100" width="275" height="50"/>
+                    <rect key="frame" x="50" y="150" width="275" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="m63-p8-yTC"/>
                     </constraints>
@@ -30,7 +30,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgK-Gc-vBV">
-                    <rect key="frame" x="50" y="250" width="275" height="50"/>
+                    <rect key="frame" x="50" y="260" width="275" height="50"/>
                     <color key="backgroundColor" red="0.28627450980000002" green="0.59607843140000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="r76-FE-kqo"/>
@@ -45,9 +45,9 @@
             <constraints>
                 <constraint firstItem="CUI-9K-8yb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6xj-AB-9Gb"/>
                 <constraint firstItem="kgK-Gc-vBV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7xD-x2-gCO"/>
-                <constraint firstItem="CUI-9K-8yb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="XDc-vh-BUZ"/>
+                <constraint firstItem="CUI-9K-8yb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="XDc-vh-BUZ"/>
                 <constraint firstItem="kgK-Gc-vBV" firstAttribute="leading" secondItem="CUI-9K-8yb" secondAttribute="leading" id="hSo-dm-Mqt"/>
-                <constraint firstItem="kgK-Gc-vBV" firstAttribute="top" secondItem="CUI-9K-8yb" secondAttribute="bottom" constant="100" id="hlJ-qH-h4K"/>
+                <constraint firstItem="kgK-Gc-vBV" firstAttribute="top" secondItem="CUI-9K-8yb" secondAttribute="bottom" constant="60" id="hlJ-qH-h4K"/>
                 <constraint firstItem="CUI-9K-8yb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="vDO-KI-NMW"/>
             </constraints>
             <point key="canvasLocation" x="130.40000000000001" y="123.68815592203899"/>

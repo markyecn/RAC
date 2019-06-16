@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ReactiveObjC/ReactiveObjC.h>
+#import <ReactiveObjC/RACEXTScope.h>
 
 @interface CustomView : UIView
+
+@property(strong, nonatomic) RACSubject *eventSignal;
 
 @end
