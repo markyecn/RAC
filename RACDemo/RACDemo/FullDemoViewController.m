@@ -40,6 +40,7 @@
     //订阅信号
     @weakify(self);
     [conbinedSignal subscribeNext:^(id x) {
+        NSLog(@"--22222--");
         @strongify(self);
         if ([x boolValue]) {
             self.loginBtn.enabled = YES;
@@ -49,6 +50,18 @@
             self.loginBtn.backgroundColor = [UIColor lightGrayColor];
         }
     }];
+    
+    //    RACSignal *colorConbinedSignal = [RACSignal combineLatest:@[_nameField.rac_textSignal,_passwordField.rac_textSignal] reduce:^id (NSString *name, NSString *password){
+    //        if (![name isEqualToString:@""] && ![password isEqualToString:@""]) {
+    //            return [UIColor colorWithRed:27/255.0 green:154/255.0 blue:251/255.0 alpha:1];
+    //        }else{
+    //            return [UIColor lightGrayColor];
+    //        }
+    //    }];
+    //宏
+    //    RAC(self.loginBtn,enabled) = conbinedSignal;
+    //    RAC(self.loginBtn,backgroundColor) = colorConbinedSignal;
+    
     
     [[_loginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
         NSLog(@"点击登录了~~~");
@@ -63,17 +76,6 @@
             NSLog(@"error----");
         }];
     }];
-    
-//    RACSignal *colorConbinedSignal = [RACSignal combineLatest:@[_nameField.rac_textSignal,_passwordField.rac_textSignal] reduce:^id (NSString *name, NSString *password){
-//        if (![name isEqualToString:@""] && ![password isEqualToString:@""]) {
-//            return [UIColor colorWithRed:27/255.0 green:154/255.0 blue:251/255.0 alpha:1];
-//        }else{
-//            return [UIColor lightGrayColor];
-//        }
-//    }];
-    //宏
-//    RAC(self.loginBtn,enabled) = conbinedSignal;
-//    RAC(self.loginBtn,backgroundColor) = colorConbinedSignal;
     
     CustomView *customView = [[CustomView alloc] init];
     customView.backgroundColor = [UIColor blueColor];
@@ -92,13 +94,13 @@
     [customView.eventSignal subscribeNext:^(id  _Nullable x) {
         NSLog(@"%@",x);
     }];
+    
 }
 
 //RACCommand
 //简易的封装 -- 一般额外还有一层RACCommand进行封装
 - (RACSignal *)doLoginWithName:(NSString *)name password:(NSString *)pwd{
     RACSignal *loginSignal =  [RACSignal createSignal:^RACDisposable * (id<RACSubscriber>  subscriber) {
-        
         //TODO
         //发送AFNetworking 请求------
         //模拟请求发送
@@ -122,7 +124,7 @@
             //TODO other things;
         }];
     }];
-
+    
     return loginSignal;
 }
 
