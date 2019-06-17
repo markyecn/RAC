@@ -62,6 +62,11 @@
         NSLog(@"observer--%@",x);
     }];
     
+    //等同于
+//   [[self rac_valuesForKeyPath:@"textLabel.text" observer:nil] subscribeNext:^(id  _Nullable x) {
+//
+//    }];
+    
     //RAC定时器
     static int time = 0;
     @weakify(self);
